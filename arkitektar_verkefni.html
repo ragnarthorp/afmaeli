@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arkitektaverkefni | Afmælisframleiðslan</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* CSS fyrir fellilista er enn hér (eða í aðal style.css) */
+        .accordion-button {
+            background-color: #e7e7e7; color: #333; cursor: pointer; padding: 18px; width: 100%;
+            border: none; text-align: left; outline: none; font-size: 1.1rem; font-weight: bold;
+            transition: background-color 0.3s ease; border-bottom: 1px solid #ddd; display: flex;
+            justify-content: space-between; align-items: center; margin-top: 5px;
+        }
+        .accordion-button:first-of-type { margin-top: 0; }
+        .accordion-button:hover, .accordion-button.active { background-color: #d0d0d0; }
+        .accordion-button::after { content: '\25BC'; font-size: 0.8em; transition: transform 0.3s ease; }
+        .accordion-button.active::after { content: "\25B2"; }
+        .panel {
+            padding: 0 18px; background-color: white; max-height: 0; overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+            border-left: 1px solid #ddd; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;
+        }
+        .panel.show { padding: 15px 18px; }
+        .panel h4 { margin-top: 0; color: #35424a; padding-bottom: 5px; border-bottom: 1px solid #eee; margin-bottom: 10px; }
+        .panel ul { list-style: disc; padding-left: 20px; margin-bottom: 15px; }
+        .panel ul ul { list-style: circle; margin-top: 5px; padding-left: 25px; }
+        .panel li { margin-bottom: 8px; line-height: 1.5; }
+        .panel p { line-height: 1.6; margin-bottom: 15px; }
+        .panel a { color: #e8491d; text-decoration: underline; }
+        .panel a:hover { color: #35424a; }
+
+        /* Stíll fyrir "Næsta Skref" upplýsingahlutann */
+        #next-stage-info {
+            margin-top: 40px; padding: 25px; background-color: #e9f5e9; /* Ljósgrænn fyrir aðgreiningu */
+            border: 1px solid #c8e6c9; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        #next-stage-info h3 { margin-top: 0; color: #1e561f; /* Dökkgrænn */ }
+        #next-stage-info p { margin-bottom: 15px; }
+        #next-stage-info a { font-weight: bold; }
+
+        .breadcrumb { margin-bottom: 20px; font-size: 0.9em; }
+        .breadcrumb a { color: #007bff; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Afmælisframleiðslan Norðlingaskóla</h1>
+        <p class="subtitle">Arkitektafyrirtæki: Teiknum og Byggjum!</p>
+    </header>
+
+    <main>
+        <nav class="breadcrumb">
+            <a href="../index.html">Til baka á forsíðu</a>
+        </nav>
+
+        <section id="arkitektar-info">
+            <h2>Grunnupplýsingar og Aðföng fyrir Arkitekta</h2>
+            <p>Hér eru upplýsingar sem geta hjálpað ykkar arkitektastofu að komast af stað. Smelltu á hvern lið til að opna og sjá meira.</p>
+
+            <button class="accordion-button">1. Gamlar Loftmyndir og Ljósmyndir</button>
+            <div class="panel">
+                <h4>Hvar finn ég loftmyndir og ljósmyndir?</h4>
+                <p>Til að sjá hvernig skólinn og umhverfi hans hefur þróast, eða til að fá betri yfirsýn yfir núverandi byggingar, eru þessar vefsíður mjög gagnlegar:</p>
+                <ul>
+                    <li><strong>Map.is (Kortasjáin):</strong>
+                        <ul><li><em>Hlekkur:</em> <a href="https://www.map.is/base/" target="_blank">Skoða Map.is</a></li></ul></li>
+                    <li><strong>Google Earth:</strong>
+                        <ul><li><em>Hlekkur:</em> <a href="https://earth.google.com/" target="_blank">Skoða Google Earth</a></li></ul></li>
+                    <li><strong>Borgarvefsjá Reykjavíkur:</strong>
+                        <ul><li><em>Hlekkur:</em> <a href="https://borgarvefsja.reykjavik.is/borgarvefsja/" target="_blank">Skoða Borgarvefsjá</a></li></ul></li>
+                    <li><strong>Viðbótarhugmyndir:</strong>
+                        <ul><li>Ljósmyndasafn Reykjavíkur, Wayback Machine, Viðtöl.</li></ul></li>
+                </ul>
+            </div>
+
+            <button class="accordion-button">2. Stafræn Verkfæri til Líkanagerðar</button>
+            <div class="panel">
+                <h4>Hvaða forrit getum við notað?</h4>
+                <ul>
+                    <li><strong>Tinkercad:</strong> Einfalt fyrir byrjendur. <a href="https://www.tinkercad.com" target="_blank">www.tinkercad.com</a></li>
+                    <li><strong>SketchUp Free:</strong> Öflugra. <a href="https://www.sketchup.com/plans-and-pricing/sketchup-free" target="_blank">SketchUp Free</a></li>
+                    <li><strong>Minecraft:</strong> Ef þið þekkið það vel.</li>
+                </ul>
+            </div>
+
+            <button class="accordion-button">3. Verkfæri til Efnislegrar Líkanagerðar</button>
+            <div class="panel">
+                <h4>Hvaða efni og verkfæri þurfum við?</h4>
+                <ul><li>Grunnefni (pappi, frauð), festingar (lím), skurðarverkfæri (með varúð!), smáatriði (tannstönglar, málning). Mundið öryggið!</li></ul>
+            </div>
+        </section>
+
+        <section id="next-stage-info">
+            <h3>Næsta Skref: Ítarlegri Gögn og Dýpri Kafa</h3>
+            <p>Þegar þið hafið nýtt ofangreind gögn og eruð komin með skýra hugmynd að ykkar verkefni, er kominn tími til að kafa dýpra.</p>
+            <p>Til að fá aðgang að **nýrri síðu** með ítarlegri upplýsingum, sérhæfðum áskorunum og fleiri dæmum, þurfið þið að:</p>
+            <ol>
+                <li>Svara stuttri <strong><a href="https://forms.gle/7PN3oSzp81vaLoxs6" target="_blank">Forms-könnun um framvindu og nánari útfærslu hugmyndar ykkar (smellið hér)</a></strong>.</li>
+            </ol>
+            <p>Eftir að þið hafið sent inn svörin mun kennari fara yfir þau og senda ykkur **sérstakt lykilorð** í tölvupósti. Þetta lykilorð notið þið svo á forsíðu verkefnisins til að opna síðuna „Arkitektar – Djúpköfun“.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Norðlingaskóli - Afmælisverkefni Unglingastigs</p>
+    </footer>
+
+    <script>
+        // JavaScript fyrir fellilista (Accordion)
+        const accordionButtons = document.querySelectorAll(".accordion-button");
+        accordionButtons.forEach(button => {
+            button.addEventListener("click", function() {
+                this.classList.toggle("active");
+                const panel = this.nextElementSibling;
+                if (panel) {
+                    if (panel.style.maxHeight && panel.style.maxHeight !== "0px") {
+                        panel.style.maxHeight = null; panel.classList.remove("show");
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px"; panel.classList.add("show");
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

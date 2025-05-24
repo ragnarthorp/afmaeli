@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sviðslistir Leikhópsins | Afmælisframleiðslan</title>
+    <link rel="stylesheet" href="../style.css"> 
+    <style>
+        .accordion-button { background-color: #e7e7e7; color: #333; cursor: pointer; padding: 18px; width: 100%; border: none; text-align: left; outline: none; font-size: 1.1rem; font-weight: bold; transition: background-color 0.3s ease; border-bottom: 1px solid #ddd; display: flex; justify-content: space-between; align-items: center; margin-top: 5px; }
+        .accordion-button:first-of-type { margin-top: 0; }
+        .accordion-button:hover, .accordion-button.active { background-color: #d0d0d0; }
+        .accordion-button::after { content: '\25BC'; font-size: 0.8em; transition: transform 0.3s ease; }
+        .accordion-button.active::after { content: "\25B2"; }
+        .panel { padding: 0 18px; background-color: white; max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out, padding 0.4s ease-out; border-left: 1px solid #ddd; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+        .panel.show { padding: 15px 18px; }
+        .panel h4 { margin-top: 0; color: #35424a; padding-bottom: 5px; border-bottom: 1px solid #eee; margin-bottom: 10px; }
+        .panel ul { list-style: disc; padding-left: 20px; margin-bottom: 15px; }
+        .panel ul ul { list-style: circle; margin-top: 5px; padding-left: 20px; }
+        .panel li { margin-bottom: 8px; line-height: 1.5; }
+        .panel p { line-height: 1.6; margin-bottom: 10px;}
+        .panel a { color: #e8491d; text-decoration: underline; }
+        .panel a:hover { color: #35424a; }
+        .breadcrumb { margin-bottom: 20px; font-size: 0.9em; }
+        .breadcrumb a { color: #007bff; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        #next-stage-info-leikhopur { margin-top: 40px; padding: 25px; background-color: #e9f5e9; border: 1px solid #c8e6c9; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        #next-stage-info-leikhopur h3 { margin-top: 0; color: #1e561f; }
+        #next-stage-info-leikhopur p { margin-bottom: 15px; }
+        #next-stage-info-leikhopur a { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Afmælisframleiðslan Norðlingaskóla</h1>
+        <p class="subtitle">Leikhópurinn: Sviðsljósið á Ykkur!</p>
+    </header>
+    <main>
+        <nav class="breadcrumb">
+            <a href="../index.html">Til baka á forsíðu</a>
+        </nav>
+        <section id="leikhopur-info">
+            <h2>Leiðbeiningar og Hugmyndir fyrir Leikhópinn</h2>
+            <p>Velkomin í leikhópinn! Hér finnið þið gagnlegar upplýsingar og innblástur til að búa til ykkar eigin afmælissýningu. Smelltu á hvern lið til að opna.</p>
+
+            <button class="accordion-button">1. Að Velja eða Skapa Ykkar Senu/Leikþátt</button>
+            <div class="panel">
+                <h4>Frá Hugmynd að Sviði</h4>
+                <ul>
+                    <li><strong>Hvar finn ég innblástur?</strong>
+                        <ul>
+                            <li><strong>Saga skólans:</strong> Rifjið upp skemmtileg eða mikilvæg augnablik úr sögu Norðlingaskóla. Gætu þau orðið að senu?</li>
+                            <li><strong>Fyrri leikrit skólans:</strong> Norðlingaskóli á ríka leiklistarsögu! (Sjá lista í "Innblástur og Dæmi" hér að neðan). Gætuð þið endurflutt stutta, valda senu?</li>
+                            <li><strong>Afmælisþemað:</strong> Hvað þýðir 20 ára afmæli fyrir ykkur? Getið þið búið til senu um fortíð, nútíð eða framtíð skólans?</li>
+                        </ul>
+                    </li>
+                    <li><strong>Endurgera eða Semja Nýtt?</strong>
+                        <ul>
+                            <li><strong>Endurgera:</strong> Kosturinn er að handritið er til. Áskorunin er að finna ykkar eigin túlkun.</li>
+                            <li><strong>Semja Nýtt:</strong> Gefur ykkur fullt frelsi! Mikilvægt er að hafa skýra hugmynd og vinna vel saman.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Einföld Uppbygging (ef þið semjið):</strong>
+                        <ul>
+                            <li><strong>Upphaf:</strong> Kynnið persónur og aðstæður. Hvað er að fara að gerast?</li>
+                            <li><strong>Miðja:</strong> Átök, vandamál eða flækja. Hvað gerist næst?</li>
+                            <li><strong>Endir:</strong> Lausn, niðurstaða eða boðskapur. Hvernig lýkur senunni?</li>
+                        </ul>
+                    </li>
+                    <li><strong>Veljið Efni sem Hentar:</strong> Hugsið um hvað hentar ykkar hóp (fjöldi, áhugasvið) og þeim tíma sem þið hafið (2-3 dagar!). Stutt og vel útfærð sena er oft betri en löng og ókláruð.</li>
+                </ul>
+            </div>
+
+            <button class="accordion-button">2. Leiktækni og Sviðsframkoma – Grunnurinn</button>
+            <div class="panel">
+                <h4>Látið Persónurnar Lifna Við</h4>
+                <ul>
+                    <li><strong>Röddin:</strong>
+                        <ul>
+                            <li><strong>Skýrleiki:</strong> Talið skýrt og greinilega svo allir áhorfendur heyri.</li>
+                            <li><strong>Raddstyrkur:</strong> Æfið ykkur í að tala nógu hátt án þess að öskra.</li>
+                            <li><strong>Tónn og Áherslur:</strong> Hvernig getur tónninn í röddinni og áherslur breytt merkingu orða?</li>
+                        </ul>
+                    </li>
+                    <li><strong>Líkaminn:</strong>
+                        <ul>
+                            <li><strong>Líkamsstaða:</strong> Hvernig stendur/situr/gengur persónan þín? Sýnir það sjálfstraust, óöryggi, gleði, sorg?</li>
+                            <li><strong>Sviðshreyfingar:</strong> Notið rýmið á sviðinu. Hreyfingar eiga að hafa tilgang.</li>
+                            <li><strong>Svipbrigði:</strong> Andlitið er mikilvægt tjáningartæki!</li>
+                        </ul>
+                    </li>
+                    <li><strong>Samleikur:</strong>
+                        <ul>
+                            <li><strong>Hlustun:</strong> Hlustaðu virkilega á það sem mótleikarar þínir segja og gera.</li>
+                            <li><strong>Viðbrögð:</strong> Leiklist er að bregðast við. Hvernig bregst þín persóna við því sem gerist?</li>
+                        </ul>
+                    </li>
+                    <li><strong>Upphitun (Dæmi):</strong>
+                        <ul>
+                            <li><strong>Rödd:</strong> Humm, tungubrjótar (t.d. "Barbaraara bað."), sírenur (fara upp og niður tónskalann).</li>
+                            <li><strong>Líkami:</strong> Teygjur, hristingur, ganga um rýmið á mismunandi hátt (eins og gömul manneskja, eins og dýr o.s.frv.).</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="accordion-button">3. Búningar, Leikmunir og Sviðsmynd – Einfaldleikinn Oft Bestur</button>
+            <div class="panel">
+                <h4>Sköpum Heiminn á Sviðinu</h4>
+                <ul>
+                    <li><strong>Búningar:</strong>
+                        <ul>
+                            <li>Oft þarf ekki nema einn eða tvo einkennandi hluti til að gefa hugmynd um persónu (t.d. hattur, gleraugu, trefill, ákveðin peysa).</li>
+                            <li>Notið föt sem þið eigið eða getið fengið lánuð.</li>
+                            <li>Hugsið um liti – geta þeir sagt eitthvað um persónuna?</li>
+                        </ul>
+                    </li>
+                    <li><strong>Leikmunir:</strong>
+                        <ul>
+                            <li>Hvaða hlutir eru NAUÐSYNLEGIR fyrir senuna? Veljið fáa en mikilvæga leikmuni.</li>
+                            <li>Getið þið búið þá til úr endurunnum efnum eða hversdagslegum hlutum? (Pappakassi getur orðið að mörgu!)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Sviðsmynd:</strong>
+                        <ul>
+                            <li>Oft er engin sviðsmynd nauðsynleg, eða mjög einföld nægir.</li>
+                            <li>Stólar geta táknað bíl, hús, fjall o.s.frv.</li>
+                            <li>Eitt einfalt bakland (t.d. málað lak eða stórt blað) getur sett tóninn.</li>
+                            <li>Lýsing (ef mögulegt) getur gert mikið fyrir andrúmsloftið.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="accordion-button">4. Innblástur og Dæmi úr Sögu Skólans</button>
+            <div class="panel">
+                <h4>Skoðum Hvað Hefur Verið Gert!</h4>
+                <p>Norðlingaskóli á glæsta leiklistarsögu! Hér eru nokkur af þeim frábæru leikritum sem hafa verið sett upp í skólanum í gegnum tíðina. Kannski getið þið sótt innblástur í þau, eða jafnvel endurflutt stutta uppáhalds senu?</p>
+                <ul>
+                    <li>Latibær</li>
+                    <li>Ronja Ræningjadóttir</li>
+                    <li>Lísa í Undralandi</li>
+                    <li>Galdrakarlinn í Oz</li>
+                    <li>Mamma Mía!</li>
+                    <li>Grease</li>
+                    <li>Aladdin</li>
+                    <li>Ávaxtakarfan</li>
+                    <li>Dýrin í Hálsaskógi</li>
+                </ul>
+                <p><strong>Vefsíður með innblástur og æfingum:</strong></p>
+                <ul>
+                    <li><strong>Drama Games for Kids and Teens:</strong> Mikið af hugmyndum að einföldum leiklistaræfingum og spuna. <a href="https://www.dramanotebook.com/drama-games-for-kids/" target="_blank">Skoða Drama Notebook</a></li>
+                    <li><strong>Beat by Beat Press - Free Drama Games:</strong> Önnur síða með ókeypis leiklistaræfingum. <a href="https://www.bbbpress.com/free-drama-games/" target="_blank">Skoða Beat by Beat Press</a></li>
+                    <li><strong>YouTube leit: "Short Skits for Students" eða "Easy Drama Club Ideas":</strong> Hér getið þið fundið mörg myndbönd af stuttum leikþáttum sem aðrir skólahópar hafa gert. Gott til að fá hugmyndir að einföldum sviðsetningum.</li>
+                </ul>
+            </div>
+        </section>
+        <section id="next-stage-info-leikhopur">
+            <h3>Næsta Skref: Ítarlegri Leiklistargögn</h3>
+            <p>Frábær vinna með grunninn! Þegar þið hafið valið ykkar leið, byrjað að æfa og eruð tilbúin að dýpka skilning ykkar á persónusköpun, spunatækni eða handritsgerð, er kominn tími á næsta skref.</p>
+            <p><strong>Til að fá aðgang að nýrri síðu með ítarlegri gögnum, þurfið þið að:</strong></p>
+            <ol>
+                <li>Svara stuttri <strong><a href="https://forms.gle/cZUDncjkWn5PD4Qj6" target="_blank">Forms-könnun um framvindu og þarfir ykkar (smellið hér)</a></strong>.</li>
+            </ol>
+            <p>Eftir að þið hafið sent inn svörin mun kennari fara yfir þau og senda ykkur **sérstakt lykilorð** í tölvupósti. Þetta lykilorð notið þið svo á forsíðu verkefnisins til að opna síðuna „Leikhópur – Djúpköfun“.</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Norðlingaskóli - Afmælisverkefni Unglingastigs</p>
+    </footer>
+    <script>
+        const accordionButtons = document.querySelectorAll(".accordion-button");
+        accordionButtons.forEach(button => {
+            button.addEventListener("click", function() {
+                this.classList.toggle("active");
+                const panel = this.nextElementSibling;
+                if (panel) {
+                    if (panel.style.maxHeight && panel.style.maxHeight !== "0px") {
+                        panel.style.maxHeight = null; 
+                        panel.classList.remove("show");
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px"; 
+                        panel.classList.add("show");
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

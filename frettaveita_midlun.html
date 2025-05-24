@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miðlun Fréttaveitunnar | Afmælisframleiðslan</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .accordion-button { background-color: #e7e7e7; color: #333; cursor: pointer; padding: 18px; width: 100%; border: none; text-align: left; outline: none; font-size: 1.1rem; font-weight: bold; transition: background-color 0.3s ease; border-bottom: 1px solid #ddd; display: flex; justify-content: space-between; align-items: center; margin-top: 5px; }
+        .accordion-button:first-of-type { margin-top: 0; }
+        .accordion-button:hover, .accordion-button.active { background-color: #d0d0d0; }
+        .accordion-button::after { content: '\25BC'; font-size: 0.8em; transition: transform 0.3s ease; }
+        .accordion-button.active::after { content: "\25B2"; }
+        .panel { padding: 0 18px; background-color: white; max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out, padding 0.4s ease-out; border-left: 1px solid #ddd; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+        .panel.show { padding: 15px 18px; }
+        .panel h4 { margin-top: 0; color: #35424a; padding-bottom: 5px; border-bottom: 1px solid #eee; margin-bottom: 10px; }
+        .panel ul { list-style: disc; padding-left: 20px; margin-bottom: 15px; }
+        .panel ul ul { list-style: circle; margin-top: 5px; padding-left: 20px; }
+        .panel li { margin-bottom: 8px; line-height: 1.5; }
+        .panel p { line-height: 1.6; margin-bottom: 10px;}
+        .panel a { color: #e8491d; text-decoration: underline; }
+        .panel a:hover { color: #35424a; }
+        .breadcrumb { margin-bottom: 20px; font-size: 0.9em; }
+        .breadcrumb a { color: #007bff; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        #next-stage-info-frettaveita { margin-top: 40px; padding: 25px; background-color: #fff8e1; border: 1px solid #ffecb3; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        #next-stage-info-frettaveita h3 { margin-top: 0; color: #8d6e63; }
+        #next-stage-info-frettaveita p { margin-bottom: 15px; }
+        #next-stage-info-frettaveita a { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Afmælisframleiðslan Norðlingaskóla</h1>
+        <p class="subtitle">Fréttaveitan: Sögurnar Okkar!</p>
+    </header>
+    <main>
+        <nav class="breadcrumb">
+            <a href="../index.html">Til baka á forsíðu</a>
+        </nav>
+        <section id="frettaveita-info">
+            <h2>Leiðbeiningar og Hugmyndir fyrir Fréttaveituna</h2>
+            <p>Velkomin á fréttastofuna! Hér finnið þið ráð og innblástur til að segja fréttir af 20 ára afmæli Norðlingaskóla. Smelltu á hvern lið til að opna.</p>
+
+            <button class="accordion-button">1. Hvað er Frétt? Að Finna og Velja Efni</button>
+            <div class="panel">
+                <h4>Finnum Sögurnar!</h4>
+                <ul>
+                    <li><strong>Hvað gerir eitthvað að frétt?</strong> Yfirleitt eitthvað nýtt, óvænt, áhugavert eða sem hefur áhrif á marga. Í okkar tilfelli getur þetta verið:
+                        <ul>
+                            <li>Minningar frá síðustu 20 árum.</li>
+                            <li>Viðtöl við fólk sem tengist skólanum.</li>
+                            <li>Umfjöllun um aðra afmælisviðburði eða verkefni.</li>
+                            <li>Framtíðarsýn fyrir skólann.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Hugmyndir að Fréttaefni fyrir Afmælið:</strong>
+                        <ul>
+                            <li>Takið viðtal við elsta/yngsta kennarann, fyrrverandi nemanda, eða nemendur úr ólíkum árgöngum.</li>
+                            <li>Rannsakið sögu skólabyggingarinnar – hvenær var hún byggð, hvaða breytingar hafa orðið?</li>
+                            <li>Fylgist með undirbúningi fyrir afmælishátíðina – "Á bak við tjöldin".</li>
+                            <li>Búið til "Topp 5 minningar úr Norðlingaskóla" með tilvitnunum.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Hver, Hvað, Hvar, Hvenær, Hvers Vegna (og Hvernig):</strong> Reynið alltaf að hafa þessar grunnspurningar í huga þegar þið veljið og vinnið efni.</li>
+                    <li><strong>Tímaramminn:</strong> Veljið verkefni sem þið getið klárað vel á þeim 2-3 dögum sem þið hafið.</li>
+                </ul>
+            </div>
+
+            <button class="accordion-button">2. Að Skrifa Góða Frétt eða Grein</button>
+            <div class="panel">
+                <h4>Orðin Okkar Vopn</h4>
+                <ul>
+                    <li><strong>Uppbygging Fréttar:</strong>
+                        <ul>
+                            <li><strong>Fyrirsögn:</strong> Stutt, grípandi og segir frá aðalatriðinu.</li>
+                            <li><strong>Inngangur (Lead):</strong> Fyrsta málsgreinin. Á að svara mikilvægustu spurningunum (Hver, Hvað, Hvar, Hvenær) strax.</li>
+                            <li><strong>Meginmál:</strong> Nánari útfærsla. Komið með fleiri smáatriði, tilvitnanir, bakgrunnsupplýsingar. Mikilvægasta efnið oftast fremst (öfugur píramídi).</li>
+                            <li><strong>Niðurlag:</strong> Stundum stutt samantekt eða hvað gerist næst. Ekki alltaf nauðsynlegt í stuttum fréttum.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Málfar:</strong> Skrifið á einföldu og skýru máli sem allir skilja. Forðist of löng eða flókin orð. Verið nákvæm.</li>
+                    <li><strong>Tilvitnanir:</strong> Notið beinar tilvitnanir (orðrétt það sem einhver sagði, innan gæsalappa) til að lífga upp á textann. Mundið að segja hver sagði það.</li>
+                    <li><strong>Heimildir:</strong> Ef þið notið upplýsingar frá öðrum (t.d. úr bók eða af vefsíðu), getið heimilda.</li>
+                    <li><strong>Prufurlestur:</strong> Látið alltaf einhvern annan í hópnum lesa yfir textann áður en hann er "birtur". Það hjálpar til við að finna villur og óskýrleika.</li>
+                </ul>
+            </div>
+
+            <button class="accordion-button">3. Myndataka, Myndbandsgerð og Hljóð (með iPad/Síma)</button>
+            <div class="panel">
+                <h4>Sjón Er Sögu Ríkari</h4>
+                <p>Þið hafið öflug verkfæri í höndunum með iPad og símum! Hér eru nokkur atriði til að hafa í huga:</p>
+                <ul>
+                    <li><strong>Ljósmyndir:</strong>
+                        <ul>
+                            <li><strong>Hvað á myndin að segja?</strong> Veljið myndefni sem styður við fréttina.</li>
+                            <li><strong>Myndbygging:</strong> Hugsið um hvað er í forgrunni og bakgrunni. Ekki hafa of mikið af dóti á myndinni. Prófið að nota "þriðjungaregluna" (Rule of Thirds) ef þið þekkið hana.</li>
+                            <li><strong>Fókus og Birta:</strong> Gangið úr skugga um að myndin sé skörp (í fókus) og að birtan sé góð (ekki of dökk eða of björt). Forðist að mynda beint á móti glugga.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Myndbönd (fyrir fréttainnslög eða viðtöl):</strong>
+                        <ul>
+                            <li><strong>Haldið Lárétt!</strong> Ef þið takið upp á síma, haldið honum ALLTAF lárétt (eins og sjónvarpsskjár).</li>
+                            <li><strong>Stöðugleiki:</strong> Reynið að halda tækinu eins kyrru og hægt er. Styðjið ykkur við borð eða vegg ef þarf.</li>
+                            <li><strong>Hljóðið er Konungurinn:</strong> Slæmt hljóð getur eyðilagt gott myndband. Takið upp á eins hljóðlátum stað og hægt er. Gangið úr skugga um að hljóðneminn á tækinu vísi í átt að þeim sem talar og sé ekki of langt í burtu.</li>
+                            <li><strong>Lengd:</strong> Stutt og hnitmiðuð myndbönd eru oft best.</li>
+                            <li><strong>Einföld Klipping:</strong> Það eru til mörg ókeypis öpp fyrir síma/iPad til að klippa saman myndbönd (t.d. iMovie fyrir iPad/iPhone, CapCut, InShot).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Hljóðupptökur (fyrir hlaðvarp eða til að nota með texta):</strong>
+                        <ul>
+                            <li>Allt sem sagt var um hljóð fyrir myndbönd á við hér.</li>
+                            <li>Notið "Voice Memos" appið á síma/iPad eða annað upptökuapp.</li>
+                            <li>Hlustið á upptökuna á eftir til að vera viss um að hún sé nógu góð.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="accordion-button">4. Innblástur, Dæmi og Verkfæri</button>
+            <div class="panel">
+                <h4>Lærum af Öðrum og Nýtum Tæknina</h4>
+                <ul>
+                    <li><strong>Mismunandi Fréttaform:</strong>
+                        <ul>
+                            <li><strong>Bein Frétt:</strong> Segir frá atburði eða staðreyndum.</li>
+                            <li><strong>Viðtal:</strong> Samtal við áhugaverða manneskju.</li>
+                            <li><strong>Pistill/Umfjöllun:</strong> Persónulegri sýn á málefni.</li>
+                            <li><strong>Ljósmyndasaga:</strong> Myndir segja söguna með stuttum textum.</li>
+                            <li><strong>Stutt fréttaskot (Video Clip):</strong> Stutt myndbrot sem sýnir eitthvað áhugavert.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Dæmi um Ungmennamiðla (Leitaðu á netinu):</strong>
+                        <ul>
+                            <li>Leitaðu að "skólablað á netinu" eða "ungmennafréttir" til að sjá hvernig aðrir gera þetta.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Gagnlegar Vefsíður og Forrit:</strong>
+                        <ul>
+                            <li>Canva: <a href="https://www.canva.com" target="_blank">Skoða Canva</a></li>
+                            <li>Storyboard That: <a href="https://www.storyboardthat.com/storyboard-creator" target="_blank">Skoða Storyboard That</a></li>
+                            <li>Pexels / Pixabay: <a href="https://www.pexels.com" target="_blank">Pexels</a>, <a href="https://pixabay.com" target="_blank">Pixabay</a></li>
+                            <li>YouTube Audio Library (fyrir tónlist/hljóðbrellur).</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="next-stage-info-frettaveita">
+            <h3>Næsta Skref: Ítarlegri Fréttamennska og Miðlun</h3>
+            <p>Þegar þið hafið ákveðið ykkar miðlunaraðferð, safnað efni og byrjað að setja það saman, er kominn tími til að skerpa á tækninni og hugsa um dreifingu.</p>
+            <p><strong>Til að fá aðgang að nýrri síðu með ítarlegri upplýsingum um t.d. vefuppsetningu, hlaðvarpsgerð eða lengri viðtöl, þurfið þið að:</strong></p>
+            <ol>
+                <li>Svara stuttri <strong><a href="https://forms.gle/kZMbF1iffgNAZDog6" target="_blank">Forms-könnun um framvindu og þarfir ykkar (smellið hér)</a></strong>.</li>
+            </ol>
+            <p>Eftir að þið hafið sent inn svörin mun kennari fara yfir þau og senda ykkur **sérstakt lykilorð** í tölvupósti. Þetta lykilorð notið þið svo á forsíðu verkefnisins til að opna síðuna „Fréttaveita – Djúpköfun“.</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Norðlingaskóli - Afmælisverkefni Unglingastigs</p>
+    </footer>
+    <script>
+        const accordionButtons = document.querySelectorAll(".accordion-button");
+        accordionButtons.forEach(button => {
+            button.addEventListener("click", function() { this.classList.toggle("active"); const panel = this.nextElementSibling; if (panel) { if (panel.style.maxHeight && panel.style.maxHeight !== "0px") { panel.style.maxHeight = null; panel.classList.remove("show"); } else { panel.style.maxHeight = panel.scrollHeight + "px"; panel.classList.add("show"); } } });
+        });
+    </script>
+</body>
+</html>

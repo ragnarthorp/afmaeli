@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sköpun Hönnunarstofunnar | Afmælisframleiðslan</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .accordion-button { background-color: #e7e7e7; color: #333; cursor: pointer; padding: 18px; width: 100%; border: none; text-align: left; outline: none; font-size: 1.1rem; font-weight: bold; transition: background-color 0.3s ease; border-bottom: 1px solid #ddd; display: flex; justify-content: space-between; align-items: center; margin-top: 5px; }
+        .accordion-button:first-of-type { margin-top: 0; }
+        .accordion-button:hover, .accordion-button.active { background-color: #d0d0d0; }
+        .accordion-button::after { content: '\25BC'; font-size: 0.8em; transition: transform 0.3s ease; }
+        .accordion-button.active::after { content: "\25B2"; }
+        .panel { padding: 0 18px; background-color: white; max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out, padding 0.4s ease-out; border-left: 1px solid #ddd; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+        .panel.show { padding: 15px 18px; }
+        .panel h4 { margin-top: 0; color: #35424a; padding-bottom: 5px; border-bottom: 1px solid #eee; margin-bottom: 10px; }
+        .panel ul { list-style: disc; padding-left: 20px; margin-bottom: 15px; }
+        .panel ul ul { list-style: circle; margin-top: 5px; padding-left: 20px; }
+        .panel li { margin-bottom: 8px; line-height: 1.5; }
+        .panel p { line-height: 1.6; margin-bottom: 10px;}
+        .panel a { color: #e8491d; text-decoration: underline; }
+        .panel a:hover { color: #35424a; }
+        .panel img.logo-example { max-width: 250px; height: auto; display: block; margin: 10px auto; border: 1px solid #eee; padding: 5px; background-color: #f8f8f8;}
+        .breadcrumb { margin-bottom: 20px; font-size: 0.9em; }
+        .breadcrumb a { color: #007bff; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        #next-stage-info-honnun { margin-top: 40px; padding: 25px; background-color: #f3e5f5; border: 1px solid #d1c4e9; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        #next-stage-info-honnun h3 { margin-top: 0; color: #7e57c2; }
+        #next-stage-info-honnun p { margin-bottom: 15px; }
+        #next-stage-info-honnun a { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Afmælisframleiðslan Norðlingaskóla</h1>
+        <p class="subtitle">Hönnunarstofan: Formum Afmælið!</p>
+    </header>
+    <main>
+        <nav class="breadcrumb">
+            <a href="../index.html">Til baka á forsíðu</a>
+        </nav>
+        <section id="honnunarstofa-info">
+            <h2>Grunnur og Hugmyndir fyrir Hönnunarstofuna</h2>
+            <p>Velkomin í hönnunarstofuna! Hér fáið þið verkfæri og innblástur til að skapa flott sjónrænt útlit fyrir 20 ára afmæli Norðlingaskóla. Smelltu á hvern lið til að opna.</p>
+
+            <button class="accordion-button">1. Hvað er Hönnun? Hugmyndir og Markmið</button>
+            <div class="panel">
+                <h4>Skiljum Hönnunina</h4>
+                <ul>
+                    <li><strong>Tilgangur Hönnunar:</strong> Hönnun snýst um að leysa vanda, koma skilaboðum á framfæri og skapa ákveðna upplifun eða tilfinningu.</li>
+                    <li><strong>Ykkar Markmið:</strong> Hvernig getur ykkar hönnun best fagnað 20 ára sögu og anda Norðlingaskóla?</li>
+                    <li><strong>Mögulegar Afurðir:</strong>
+                        <ul>
+                            <li><strong>Afmælismerki (lógó):</strong> Nýtt merki sem fagnar 20 árunum. Gæti það unnið með núverandi lógói skólans (sjá hér að neðan) eða verið alveg nýtt?</li>
+                            <li><strong>Veggspjöld:</strong> Til að auglýsa afmælisviðburði eða sýna mikilvæga þætti úr sögu skólans.</li>
+                            <li><strong>Minjagripir:</strong> Hönnun á bol, lyklakippu, límmiða eða öðru sem nemendur og starfsfólk gætu viljað eiga.</li>
+                            <li><strong>Stafrænt Efni:</strong> Útlit fyrir færslur á samfélagsmiðla, borðar fyrir vefsíðu.</li>
+                            <li><strong>Skreytingar:</strong> Hugmyndir að skreytingum fyrir afmælishátíð.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Markhópurinn:</strong> Fyrir hverja eruð þið að hanna? (Aðrir nemendur, kennarar, foreldrar, fyrrverandi nemendur?). Hönnunin þarf að höfða til þeirra.</li>
+                    <li><strong>Kjarnaboðskapur:</strong> Hvaða eina skilaboð eða tilfinningu á hönnunin ykkar að vekja? (Gleði, stolt, samfélag, framtíð, saga?).</li>
+                </ul>
+            </div>
+
+            <button class="accordion-button">2. Grunnatriði í Sjónrænni Hönnun (með Norðlingaskóla í huga)</button>
+            <div class="panel">
+                <h4>Lykilþættir Góðrar Hönnunar</h4>
+                <p>Lógó Norðlingaskóla gefur okkur vísbendingar um liti og anda. Hér er það til viðmiðunar:</p>
+                <p><img src="https://alfredprod.imgix.net/cover/47120a45-2fbf-4763-acc8-f3c84e65de43.png?w=1200&q=75&auto=format" alt="Lógó Norðlingaskóla" class="logo-example"></p> 
+                <!-- MIKILVÆGT: Gakktu úr skugga um að slóðin '../myndir/logo_nordlingaskoli.png' sé rétt miðað við hvar þú vistar lógómyndina -->
+                <ul>
+                    <li><strong>Litir:</strong>
+                        <ul>
+                            <li>Lógóið notar sólargulan/appelsínugulan, grænan og dökkgráan/svartan. Þetta eru góðir útgangspunktar.</li>
+                            <li>Hvaða tilfinningar vekja þessir litir? Hvernig getið þið notað þá (eða aðra liti sem passa við) í ykkar afmælishönnun?</li>
+                            <li>Hugsið um litasamsetningar – hvaða litir fara vel saman? Notið litahjól (color wheel) til innblásturs ef þið viljið.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Letur (Typography):</strong>
+                        <ul>
+                            <li>Letrið í lógói Norðlingaskóla er líflegt og óformlegt. Ef þið hannið afmælismerki, ætti það að vera í svipuðum anda eða skapa ákveðna andstæðu sem virkar samt vel með?</li>
+                            <li>Veljið leturgerðir sem eru **læsilegar**.</li>
+                            <li>Notið ekki of margar ólíkar leturgerðir í sömu hönnun (1-3 er oftast nóg).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Form og Tákn:</strong> Fífillinn, börnin (sem eru táknuð í fíflinum) og laufin í lógóinu eru sterk tákn. Getið þið notað svipuð form, einfaldað þau eða sótt innblástur í náttúruna í ykkar hönnun? Hvað með töluna "20" – hvernig er hægt að flétta hana inn á skapandi hátt?</li>
+                    <li><strong>Jafnvægi og Samsetning (Composition):</strong> Hvernig raðið þið texta, myndum og formum saman þannig að það sé auðvelt að skilja og ánægjulegt að horfa á? Hugsið um "neikvætt rými" (negative space) – plássið í kringum hlutina.</li>
+                </ul>
+            </div>
+
+            <button class="accordion-button">3. Hönnunarferlið og Verkfæri</button>
+            <div class="panel">
+                <h4>Frá Hugmynd að Veruleika</h4>
+                <ul>
+                    <li><strong>Hönnunarferlið (Skrefin):</strong>
+                        <ol>
+                            <li><strong>Rannsókn & Innblástur:</strong> Skoðið lógó skólans, afmælishönnun annarra, safnið hugmyndum (mood board).</li>
+                            <li><strong>Hugmyndavinna & Skissur:</strong> Teiknið margar (5-10+) ólíkar og grófar skissur á blað. Ekki dæma hugmyndirnar strax!</li>
+                            <li><strong>Val & Þróun:</strong> Veljið 2-3 bestu skissurnar og útfærið þær nánar (kannski í lit, eða byrjið í tölvu).</li>
+                            <li><strong>Endurgjöf:</strong> Sýnið öðrum (kennara, samnemendum) og fáið álit. Verið opin fyrir gagnrýni.</li>
+                            <li><strong>Frágangur:</strong> Fínpússið lokahönnunina. Gangið úr skugga um að hún virki í þeim stærðum og á þeim miðlum sem hún er hugsuð fyrir.</li>
+                        </ol>
+                    </li>
+                    <li><strong>Verkfæri:</strong>
+                        <ul>
+                            <li><strong>Grunnverkfæri:</strong> Blýantar (mismunandi þykktir), strokleður, reglustika, skissubækur/góður pappír.</li>
+                            <li><strong>Litun:</strong> Trélitir, tússlitir af góðum gæðum.</li>
+                            <li><strong>Stafræn Verkfæri (mjög aðgengileg):</strong>
+                                <ul>
+                                    <li><strong>Canva:</strong> Frábært fyrir byrjendur, mikið af sniðmátum fyrir plaköt, lógó, samfélagsmiðla o.fl. <a href="https://www.canva.com" target="_blank">www.canva.com</a></li>
+                                    <li><strong>Google Drawings:</strong> Einfalt teikniforrit í Google Drive.</li>
+                                    <li><strong>iPad öpp:</strong> Ef þið hafið aðgang að iPad, þá eru til mörg góð teikni- og hönnunaröpp (t.d. Procreate (kostar), Autodesk Sketchbook (frítt)).</li>
+                                </ul>
+                            </li>
+                            <li><strong>Fyrir Áþreifanlegar Afurðir (með aðstoð kennara):</strong>
+                                <ul>
+                                    <li><strong>Vectoraskeri í Smíðastofu:</strong> Þetta er frábært tæki! Ef þið hannið eitthvað í vektorsniði (t.d. einfalt lógó eða form í forriti eins og Inkscape (ókeypis) eða ef skólinn á Adobe Illustrator), þá gæti verið hægt að skera það út. Talið við smíðakennara um möguleika!</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="accordion-button">4. Innblástur og Gagnlegir Hlekkir</button>
+            <div class="panel">
+                <h4>Vekjum Sköpunarkraftinn!</h4>
+                <ul>
+                    <li><strong>Pinterest:</strong> Leitarorð eins og "anniversary logo", "school event poster design", "minimalist logo design", "student project branding". <a href="https://www.pinterest.com" target="_blank">Skoða Pinterest</a></li>
+                    <li><strong>Designspiration:</strong> Vefsíða með miklum hönnunarinnblæstri. <a href="https://designspiration.com/" target="_blank">Skoða Designspiration</a></li>
+                    <li><strong>Ókeypis Myndir og Tákn:</strong>
+                        <ul>
+                            <li>Pexels: <a href="https://www.pexels.com" target="_blank">www.pexels.com</a></li>
+                            <li>Pixabay: <a href="https://pixabay.com" target="_blank">www.pixabay.com</a></li>
+                            <li>Flaticon (fyrir táknmyndir): <a href="https://www.flaticon.com" target="_blank">www.flaticon.com</a></li>
+                        </ul>
+                    </li>
+                    <li><strong>Hugsið út fyrir Kassann:</strong> Skoðið umhverfið í Norðlingaskóla – form, liti, mynstur, náttúruna í kring. Hvað einkennir skólann ykkar? Hvernig getur það komið fram í hönnun?</li>
+                </ul>
+            </div>
+        </section>
+        <section id="next-stage-info-honnun">
+            <h3>Næsta Skref fyrir Hönnunarstofuna</h3>
+            <p>Þegar þið hafið farið í gegnum þessar grunnupplýsingar, skissað margar hugmyndir og eruð farin að þrengja hringinn að ykkar lokaafurð, gæti verið gagnlegt að fá ítarlegri stuðning.</p>
+            <p><strong>Til að fá aðgang að nýrri síðu með ítarlegri upplýsingum um t.d. vörumerkjagerð, notkun ákveðinna hönnunarforrita eða útfærslu fyrir vectoraskera, þurfið þið að:</strong></p>
+            <ol>
+                <li>Svara stuttri <strong><a href="https://forms.gle/QPMyAqgF4axCxzDv5" target="_blank">Forms-könnun um framvindu og ykkar bestu hönnunartillögu (smellið hér)</a></strong>.</li>
+            </ol>
+            <p>Eftir að þið hafið sent inn svörin mun kennari fara yfir þau og senda ykkur **sérstakt lykilorð** í tölvupósti. Þetta lykilorð notið þið svo á forsíðu verkefnisins til að opna síðuna „Hönnunarstofa – Djúpköfun“.</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Norðlingaskóli - Afmælisverkefni Unglingastigs</p>
+    </footer>
+    <script>
+        const accordionButtons = document.querySelectorAll(".accordion-button");
+        accordionButtons.forEach(button => {
+            button.addEventListener("click", function() { this.classList.toggle("active"); const panel = this.nextElementSibling; if (panel) { if (panel.style.maxHeight && panel.style.maxHeight !== "0px") { panel.style.maxHeight = null; panel.classList.remove("show"); } else { panel.style.maxHeight = panel.scrollHeight + "px"; panel.classList.add("show"); } } });
+        });
+    </script>
+</body>
+</html>

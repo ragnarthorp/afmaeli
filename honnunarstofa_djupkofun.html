@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hönnunarstofa – Djúpköfun | Afmælisframleiðslan</title>
+    <link rel="stylesheet" href="../style.css"> <!-- Almennt CSS -->
+    <style>
+        /* Sami CSS og fyrir aðrar djúpköfunarsíður */
+        main { max-width: 900px; margin: 20px auto; padding: 0 20px; }
+        .breadcrumb { margin-bottom: 25px; font-size: 0.9em; padding: 10px 0; border-bottom: 1px solid #eee; }
+        .breadcrumb a { color: #007bff; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb span { margin: 0 5px; color: #6c757d; }
+        .content-section { background-color: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 25px; margin-bottom: 30px; box-shadow: 0 3px 6px rgba(0,0,0,0.07); }
+        .content-section h3 { font-size: 1.6rem; color: #35424a; margin-top: 0; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #e8491d; }
+        .content-section ul { list-style: none; padding-left: 0; }
+        .content-section ul li { padding-left: 25px; position: relative; margin-bottom: 12px; line-height: 1.6; }
+        .content-section ul li::before { content: '\271A'; /* Unicode fyrir blýant (✏) */ color: #e8491d; font-weight: bold; position: absolute; left: 0; top: 1px; font-size: 1.1em; }
+        .content-section a { color: #0056b3; text-decoration: none; font-weight: 500; }
+        .content-section a:hover { text-decoration: underline; color: #e8491d; }
+        .content-section p { line-height: 1.7; color: #444; margin-bottom: 15px; }
+        .content-section ul ul { margin-top: 8px; padding-left: 20px; } /* Stíll fyrir undirlista */
+        .content-section ul ul li::before { content: '\203A'; font-size: 1em; color: #555; } /* Tákn fyrir undirlista */
+        .code-example { /* Stíll fyrir kóðadæmi */
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+            overflow-x: auto; /* Leyfa skrun ef kóði er breiður */
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Afmælisframleiðslan Norðlingaskóla</h1>
+        <p class="subtitle">Hönnunarstofa – Djúpköfun í Sköpun</p>
+    </header>
+
+    <main>
+        <nav class="breadcrumb">
+            <a href="../index.html">Til baka á forsíðu</a>
+            <span>></span>
+            <a href="honnunarstofa_skopun.html">Hönnunarstofa Grunnupplýsingar</a>
+        </nav>
+
+        <section class="content-section">
+            <h3>Velkomin í Djúpköfun Hönnunarstofunnar!</h3>
+            <p>Hér kynnumst við ítarlegri þáttum í hönnun, undirbúningi fyrir framleiðslu (t.d. með vectoraskera) og hvernig hægt er að þróa sterkara vörumerki fyrir afmælið.</p>
+        </section>
+
+        <section class="content-section">
+            <h3>Að Skapa Sterkt Afmælismerki (Lógó og Útlit)</h3>
+            <ul>
+                <li><strong>Skilgreining á Persónuleika:</strong> Hvaða orð lýsa best þeim anda sem þið viljið að afmælið hafi? (T.d. hátíðlegt, skemmtilegt, stolt, framsækið, sögufrægt). Látið þetta stýra hönnunarvalkostum ykkar.</li>
+                <li><strong>Fjölhæfni Merkisins:</strong>
+                    <ul>
+                        <li>Virkar lógóið ykkar vel í mjög lítilli stærð (t.d. á vef eða litlum minjagrip)?</li>
+                        <li>Virkar það vel í mjög stórri stærð (t.d. á stóru plakati eða borða)?</li>
+                        <li>Er hægt að nota það í einum lit (svart/hvítt) án þess að það tapi meiningu?</li>
+                        <li>Virkar það á ljósum og dökkum bakgrunni? (Þetta kallast oft "neikvæð" eða "reverse" útgáfa).</li>
+                    </ul>
+                </li>
+                <li><strong>Vektorgrafík vs. Rastamyndir (Pixel) – Ítrekun:**
+                    <ul>
+                        <li>Fyrir lógó og aðra grafík sem á að nota í mismunandi stærðum (sérstaklega fyrir prentun eða vectoraskera) er **vektorgrafík** (t.d. SVG skrá) nauðsynleg. Hún tapar ekki gæðum við stækkun/minnkun.</li>
+                        <li>Forrit eins og Inkscape (ókeypis), Adobe Illustrator (kostar) eða jafnvel sumir möguleikar í Canva Pro geta hjálpað ykkur að búa til vektorgrafík.</li>
+                    </ul>
+                </li>
+                <li><strong>Litatöflur (Color Palettes):</strong> Ef þið eruð að hanna fleiri en einn hlut (t.d. lógó, plakat, vefborða), ákveðið fasta litatöflu (3-5 aðallitir) sem þið notið í öllum ykkar afmælisgögnum. Þetta skapar samræmi og fagmennsku.
+                    <ul>
+                        <li>Notið liti úr lógói Norðlingaskóla sem grunn og bætið við 1-2 hreimlitum ef þarf.</li>
+                        <li>Vefsíður eins og <a href="https://coolors.co" target="_blank">Coolors.co</a> eða <a href="https://color.adobe.com" target="_blank">Adobe Color</a> geta hjálpað ykkur að búa til og prófa litatöflur.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h3>Nánar um Undirbúning fyrir Vectoraskera</h3>
+            <p>Ef þið hafið áhuga á að nota vectoraskerann í smíðastofunni er mikilvægt að hönnunin sé rétt undirbúin:</p>
+            <ul>
+                <li><strong>Lokaðir Ferlar (Closed Paths):</strong> Allar línur sem eiga að skera út form þurfa að mynda lokaða ferla. Opnir ferlar geta valdið því að skerinn viti ekki hvar á að byrja eða enda.</li>
+                <li><strong>Þykkt Lína vs. Raunveruleg Skurðarlína:</strong> Í hönnunarforritum getið þið gefið línum þykkt (stroke). Fyrir vectoraskera er það oftast miðja línunnar sem skerinn fylgir. Ef þið viljið að "línan" sjálf sé skorin út sem form, þarf að breyta línunni í fyllt form (convert stroke to path/object).</li>
+                <li><strong>Texti sem Form:</strong> Ef þið notið texta sem á að skera út, þarf oftast að breyta textanum í form/ferla (convert text to paths/curves). Annars gæti skerinn ekki þekkt leturgerðina.</li>
+                <li><strong>Einföldun:</strong> Of mörg lítil smáatriði eða mjög flóknar línur geta verið erfiðar fyrir skerann og tekið langan tíma. Reynið að einfalda hönnunina fyrir skurð.</li>
+                <li><strong>Prófunarskurður:</strong> Ef mögulegt, biðjið um að fá að gera lítinn prófunarskurð á litlum bita af efninu áður en þið skerið út allt lokaverkefnið.</li>
+                <li><strong>Hugbúnaður fyrir Skerann:</strong> Oft fylgir sérstakur hugbúnaður með vectoraskerum sem undirbýr skrána fyrir skurð. Kynnið ykkur það ferli með kennara.</li>
+                <li><strong>ÖRYGGI OG SAMRÁÐ:</strong> Endurtekið – **ræðið alltaf við smíðakennara eða ábyrgan kennara** áður en þið notið skerann. Þau þekkja tækið og öryggisreglur.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h3>Hugsað Um Notendaupplifun (User Experience - UX) í Hönnun</h3>
+            <p>Jafnvel fyrir afmælismerki eða plakat getur verið gott að hugsa um notandann:</p>
+            <ul>
+                <li><strong>Skýrleiki:</strong> Skilur fólk strax hvað hönnunin ykkar táknar eða hvaða upplýsingar plakatið er að gefa?</li>
+                <li><strong>Læsileiki:</strong> Er textinn nógu stór og skýr til að lesa úr þeirri fjarlægð sem hann er hugsaður fyrir?</li>
+                <li><strong>Aðgengi:</strong> Ef þið hannið fyrir vef eða stafræna miðla, hugsið um aðgengi fyrir fólk með skerta sjón (t.d. nægilegur kontrast milli texta og bakgrunns).
+                    <ul>
+                        <li>Verkfæri eins og <a href="https://webaim.org/resources/contrastchecker/" target="_blank">WebAIM Contrast Checker</a> geta hjálpað.</li>
+                    </ul>
+                </li>
+                <li><strong>Tilfinningaleg Tenging:</strong> Hvernig lætur hönnunin ykkar fólki líða? (Stolt, gleði, forvitni?).</li>
+            </ul>
+        </section>
+        
+        <section class="content-section">
+            <h3>Verkfæri fyrir Lengra Komna (Valfrjálst)</h3>
+            <p>Ef þið hafið mikinn áhuga og viljið kynna ykkur öflugri (en oft flóknari) verkfæri:</p>
+            <ul>
+                <li><strong>Inkscape (Ókeypis Vektorteikniforrit):</strong> Frábært ókeypis valkostur við Adobe Illustrator til að búa til vektorgrafík. Krefst smá lærdóms. <a href="https://inkscape.org/" target="_blank">Sækja Inkscape</a></li>
+                <li><strong>GIMP (Ókeypis Myndvinnsluforrit):</strong> Öflugt ókeypis valkostur við Adobe Photoshop fyrir ítarlega myndvinnslu. <a href="https://www.gimp.org/" target="_blank">Sækja GIMP</a></li>
+                <li><strong>Figma (Vef- og Samvinnu Hönnunartól):</strong> Mjög vinsælt í dag fyrir vef- og apphönnun, en getur líka verið notað fyrir grafíska hönnun. Býður upp á góða ókeypis útgáfu. <a href="https://www.figma.com" target="_blank">Skoða Figma</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Norðlingaskóli - Afmælisverkefni Unglingastigs</p>
+    </footer>
+</body>
+</html>

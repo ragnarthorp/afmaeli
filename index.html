@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afmælisframleiðslan Norðlingaskóla</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Afmælisframleiðslan Norðlingaskóla</h1>
+        <p class="subtitle">20 Ár af Sögum og Sköpun!</p>
+    </header>
+
+    <main>
+        <section id="velkomin">
+            <h2>Velkomin í verkefnið!</h2>
+            <p>Hér finnur þú allar upplýsingar og gögn sem þú þarft til að stofna þitt "fyrirtæki" og búa til afurð fyrir 20 ára afmæli Norðlingaskóla.</p>
+            <p>Byrjaðu á að skoða <strong>Startmöppuna</strong> hér að neðan.</p>
+        </section>
+
+        <section id="startmappa">
+            <h3>I. Startmappa: Grunnurinn</h3>
+            <ul>
+                <li><a href="https://docs.google.com/document/d/1__EoNFjAm0P8ApGeOex3Nj-E621xiymbpJmu1_tFsp0/edit?usp=sharing" target="_blank">Verkefnalýsing í Stuttu Máli (Docs)</a></li>
+                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfgSBJeu5Xk4R5OLDV7w-ZeX0rYN_-W9rldpWhm-APBMMLLjA/viewform?usp=sharing&ouid=112230711935746751447" target="_blank">Stofnskjal Fyrirtækis (Sniðmát - Forms)</a></li>
+                <li><a href="https://docs.google.com/document/d/1bxzNf_SorCYY3NVeZhgysK6-xezp5xt-eC2HI7sBPGc/edit?usp=sharing" target="_blank">Hugmyndabanki – Möguleg Fyrirtæki</a></li>
+                <li><a href="https://docs.google.com/document/d/1fLnuhvVVEO59iRZiPuVLAPoqH1bRPP0Qdxy2kFkWPDU/edit?usp=sharing" target="_blank">Tímalína Verkefnis (Gróf)</a></li>
+            </ul>
+            <p>Þegar þið hafið fyllt út og skilað <strong>Stofnskjali Fyrirtækis</strong> og fengið lykilorð frá kennara í tölvupósti, sláið það inn hér að neðan til að komast á ykkar sérsviðssíðu (eða ítarefnissíðu ef þið eruð komin lengra).</p>
+        </section>
+
+        <section id="adgangur-sersvid">
+            <h3>II. Aðgangur að Ykkar Efni</h3>
+            <div id="password-form">
+                <label for="password">Sláðu inn lykilorðið sem þú fékkst frá kennara:</label>
+                <input type="password" id="password" name="password">
+                <button onclick="checkPasswordAndRedirect()">Opna Síðu</button>
+                <p id="error-message" class="error"></p>
+            </div>
+        </section>
+
+        <!-- Valmynd að sérsviðum er ekki lengur sýnd/notuð með þessari aðferð -->
+        <!-- 
+        <section id="sersvid-efni" class="hidden">
+            <h3>Sérsviðin: Verkfæri og Aðföng</h3>
+            ...
+        </section>
+        -->
+
+        <section id="onnur-gogn">
+            <h3 id="hugmyndabanki-example">Hugmyndabanki (Almenn Dæmi)</h3>
+            <ul>
+                <li>Arkitektafyrirtæki: Gerir líkan af nýrri/eldri byggingu.</li>
+                <li>Leikhópur: Setur á svið senur úr fyrri leikritum.</li>
+                <li>Fréttaveita: Býr til afmælisfréttablað/myndband.</li>
+                <li>Hönnunarstofa: Hannar afmælismerki/plakat.</li>
+            </ul>
+            <h3 id="timalina-example">Tímalína Verkefnis (Gróf Dæmi)</h3>
+            <ul>
+                <li><strong>Dagur 1 (Morgun):</strong> Hugmyndavinna, hópaskipting, fyrirtækjastofnun (fylla út Stofnskjal).</li>
+                <li><strong>Dagur 1 (Eftirmiðdagur):</strong> Fá lykilorð að sérsviðssíðu (Stig 1), hefja verkáætlun og rannsókn.</li>
+                <li><strong>Dagur 2:</strong> Framleiðsla og úrvinnsla. Möguleiki á að fá aðgang að Stig 2 efni.</li>
+                <li><strong>Dagur 3 (Morgun):</strong> Lokafrágangur, undirbúningur kynningar.</li>
+                <li><strong>Dagur 3 (Eftirmiðdagur):</strong> Afmælishátíð – Kynningar!</li>
+            </ul>
+        </section>
+
+        <section id="verkfaerakista">
+            <h3>IV. Verkfærakista / Almennur Stuðningur</h3>
+            <ul>
+                <li><a href="verkfaeri/hópavinna.pdf" target="_blank">Ábendingar um Hópavinnu (PDF)</a></li>
+                <li><a href="https://www.canva.com" target="_blank">Canva (ókeypis hönnunartól)</a></li>
+                <li><a href="https://pixabay.com" target="_blank">Pixabay (ókeypis myndir)</a></li>
+                <li><a href="https://www.storyboardthat.com/storyboard-creator" target="_blank">Storyboard That (ókeypis söguborðsgerð)</a></li>
+                <li><a href="https://www.audacityteam.org/" target="_blank">Audacity (ókeypis hljóðvinnsluforrit)</a></li>
+                <!-- Fleiri gagnlegir almennir hlekkir -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Norðlingaskóli - Afmælisverkefni Unglingastigs</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
