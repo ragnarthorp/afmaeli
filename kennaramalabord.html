@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kennaramælaborð - Afmælisframleiðsla</title>
+    <!-- 
+        Þú getur notað aðal 'style.css' skrána þína ef þú vilt samræmt útlit,
+        eða búið til sérstaka CSS skrá fyrir mælaborðið.
+        Ef 'style.css' er í rótinni og þessi skrá líka, þá er þetta rétt.
+    -->
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        /* Einfaldir viðbótarstílar fyrir mælaborðið */
+        /* Þú getur fært þetta yfir í style.css ef þú vilt */
+        #dashboard-container {
+            margin: 20px;
+            padding: 15px;
+            background-color: #f9f9f9; /* Ljósari bakgrunnur fyrir meginmál síðunnar */
+            border-radius: 8px;
+        }
+
+        table#group-status-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Smá skuggi á töfluna */
+        }
+
+        table#group-status-table th, 
+        table#group-status-table td {
+            border: 1px solid #ddd;
+            padding: 10px 12px; /* Aukið padding örlítið */
+            text-align: left;
+            font-size: 0.95em; /* Örlítið minna letur fyrir töfluna */
+        }
+
+        table#group-status-table th {
+            background-color: #e9ecef; /* Ljósari grár fyrir hausa */
+            font-weight: bold;
+            color: #495057; /* Dökkgrár texti fyrir hausa */
+        }
+
+        table#group-status-table tr:nth-child(even) { /* Röndótt tafla fyrir betri læsileika */
+            background-color: #f8f9fa;
+        }
+        table#group-status-table tr:hover { /* Hover áhrif á raðir */
+            background-color: #e2e6ea;
+        }
+
+        /* Stöðulitir (dæmi) */
+        .status-lokid { background-color: #d4edda !important; color: #155724 !important; font-weight: bold; }
+        .status-i-vinnslu { background-color: #fff3cd !important; color: #856404 !important; }
+        .status-tharf-adstod { background-color: #f8d7da !important; color: #721c24 !important; font-weight: bold; }
+        .status-ekki-hafinn { background-color: #f8f9fa !important; color: #6c757d !important; }
+
+        /* Gátbox útlit */
+        .checkbox-display { 
+            font-size: 1.3em; /* Stærra tákn */
+            text-align: center;
+            font-weight: bold;
+        }
+        .checkbox-display.checked::before { content: "✔"; color: #28a745; /* Grænt hak */ }
+        .checkbox-display.unchecked::before { content: "☐"; color: #adb5bd; /* Ljósgrár kassi */ }
+        
+        #refresh-data-button {
+            padding: 8px 15px;
+            background-color: #007bff; /* Blár takki */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        #refresh-data-button:hover {
+            background-color: #0056b3;
+        }
+        #last-updated-time {
+            font-size: 0.85em;
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Hausinn getur verið sá sami og á index.html eða sérstakur fyrir mælaborðið -->
+        <h1>Kennaramælaborð: Yfirsýn Hópa</h1>
+        <p>Afmælisframleiðsla Norðlingaskóla</p>
+    </header>
+
+    <main id="dashboard-container">
+        <h2>Staða Fyrirtækja (Hópa)</h2>
+        <p>Þessi síða sækir gögn úr Google Sheets skjali. Uppfærið skjalið beint til að sjá breytingar hér. Smelltu á "Endurhlaða Gögn" til að sækja nýjustu stöðu handvirkt.</p>
+        
+        <button id="refresh-data-button">Endurhlaða Gögn</button> 
+        <p id="last-updated-time">Síðast uppfært: Ekki enn</p>
+
+        <div style="overflow-x:auto;"> <!-- Gerir töfluna skrunanlega lárétt á litlum skjám -->
+            <table id="group-status-table">
+                <thead>
+                    <!-- Hausar töflunnar verða búnir til með JavaScript -->
+                </thead>
+                <tbody>
+                    <!-- Raðir með gögnum verða búnar til með JavaScript -->
+                    <tr>
+                        <!-- Fjöldi dálka hér ætti að passa við fjölda hausa sem þú býst við -->
+                        <td colspan="12" style="text-align:center; padding: 20px;">Sæki gögn... Vinsamlegast bíðið.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Kennarateymi Norðlingaskóla</p>
+    </footer>
+
+    <!-- JavaScript skráin fyrir mælaborðið -->
+    <script src="kennaramalabord_script.js"></script>
+</body>
+</html>
