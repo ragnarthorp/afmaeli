@@ -2,473 +2,182 @@
 <html lang="is">
 <head>
     <meta charset="UTF-8">
+    <title>Afmælisverkefni Norðlingaskóla</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Afmæli Norðlingaskóla</title>
     <style>
-        * {
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9)),
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="pattern" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23pattern)"/></svg>');
-            padding: 4rem 2rem;
+        header {
+            padding: 40px 20px;
             text-align: center;
-            color: white;
-            position: relative;
-            overflow: hidden;
+            background-color: rgba(0,0,0,0.2);
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
-            animation: shimmer 3s infinite;
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
         }
 
-        @keyframes shimmer {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        header p {
+            font-size: 1.2rem;
         }
 
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero .subtitle {
-            font-size: 1.5rem;
-            font-weight: 300;
-            opacity: 0.9;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Main Content */
         main {
-            background: white;
-            margin: -2rem auto 0;
+            background-color: #fff;
+            color: #333;
+            padding: 30px 20px;
             border-radius: 20px 20px 0 0;
-            box-shadow: 0 -10px 40px rgba(0,0,0,0.1);
-            position: relative;
-            z-index: 2;
+            margin-top: -20px;
         }
 
-        /* Sections */
         section {
-            padding: 3rem 2rem;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        section:last-child {
-            border-bottom: none;
+            margin-bottom: 30px;
         }
 
         h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
+            font-size: 2rem;
+            margin-bottom: 15px;
             color: #2d3748;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webpack-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
 
-        h3 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: #4a5568;
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-left: 1rem;
-        }
-
-        h3::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 2px;
-        }
-
-        p {
-            font-size: 1.1rem;
-            color: #4a5568;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Welcome Section */
-        #velkomin {
-            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
-            border-radius: 15px;
-            margin: 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        #velkomin::before {
-            content: '🎉';
-            position: absolute;
-            top: 2rem;
-            right: 2rem;
-            font-size: 3rem;
-            opacity: 0.3;
-        }
-
-        /* Cards */
-        .card {
-            background: white;
-            border-radius: 15px;
-            padding: 2rem;
-            margin: 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-
-        /* Lists */
         ul {
-            list-style: none;
-            padding: 0;
+            padding-left: 20px;
         }
 
         li {
-            margin-bottom: 1rem;
-            padding: 1rem;
-            background: #f8fafc;
+            margin-bottom: 10px;
+        }
+
+        .card {
+            background-color: #f7f7f7;
+            padding: 20px;
             border-radius: 10px;
-            border-left: 4px solid #667eea;
-            transition: all 0.3s ease;
-            position: relative;
+            margin-bottom: 20px;
         }
 
-        li:hover {
-            background: #edf2f7;
-            transform: translateX(5px);
-        }
-
-        li strong {
-            color: #2d3748;
-        }
-
-        /* Links */
-        a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        a:hover {
-            color: #764ba2;
-        }
-
-        a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            transition: width 0.3s ease;
-        }
-
-        a:hover::after {
-            width: 100%;
-        }
-
-        /* Password Form */
         #password-form {
-            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
-            padding: 2rem;
-            border-radius: 15px;
             text-align: center;
-            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: #2d3748;
+            margin-top: 30px;
         }
 
         input[type="password"] {
-            width: 100%;
-            max-width: 300px;
-            padding: 1rem;
-            border: 2px solid #e2e8f0;
-            border-radius: 10px;
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            transition: border-color 0.3s ease;
-            background: white;
-        }
-
-        input[type="password"]:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            padding: 12px;
+            font-size: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            width: 250px;
         }
 
         button {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
+            padding: 12px 24px;
+            font-size: 1rem;
             border: none;
-            padding: 1rem 2rem;
-            border-radius: 10px;
-            font-size: 1.1rem;
-            font-weight: 600;
+            border-radius: 8px;
+            background-color: #667eea;
+            color: white;
+            margin-top: 10px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
         }
 
         button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
-        }
-
-        button:active {
-            transform: translateY(0);
+            background-color: #5a67d8;
         }
 
         .error {
-            color: #e53e3e;
-            font-weight: 600;
-            margin-top: 1rem;
+            color: red;
+            font-weight: bold;
+            margin-top: 15px;
         }
 
-        /* Footer */
         footer {
             background: #2d3748;
             color: white;
             text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
+            padding: 20px;
+            margin-top: 40px;
         }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero .subtitle {
-                font-size: 1.2rem;
-            }
-            
-            section {
-                padding: 2rem 1rem;
-            }
-            
-            .card {
-                margin: 1rem;
-                padding: 1.5rem;
-            }
-            
-            h2 {
-                font-size: 2rem;
-            }
-            
-            h3 {
-                font-size: 1.5rem;
-            }
-        }
-
-        /* Animation for page load */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .card, section {
-            animation: fadeInUp 0.6s ease forwards;
-        }
-
-        .card:nth-child(2) { animation-delay: 0.1s; }
-        .card:nth-child(3) { animation-delay: 0.2s; }
-        .card:nth-child(4) { animation-delay: 0.3s; }
     </style>
 </head>
 <body>
-    <div class="hero">
-        <div class="container">
-            <h1>Afmælisframleiðslan Norðlingaskóla</h1>
-            <p class="subtitle">20 Ár af Sögum og Sköpun! 🎊</p>
+
+<header>
+    <h1>Afmælisverkefni Norðlingaskóla</h1>
+    <p>20 ára sögur, sköpun og fyrirtæki!</p>
+</header>
+
+<main>
+    <section>
+        <h2>Startmappa: Grunnurinn</h2>
+        <ul>
+            <li><a href="#" target="_blank">📋 Verkefnalýsing í stuttu máli</a></li>
+            <li><a href="#" target="_blank">🏢 Stofnskjal fyrirtækis</a></li>
+            <li><a href="#" target="_blank">💡 Hugmyndabanki</a></li>
+            <li><a href="#" target="_blank">📅 Tímalína verkefnis</a></li>
+        </ul>
+        <p>Þegar þið hafið fyllt út stofnskjalið og fengið lykilorð frá kennara, sláið það inn hér að neðan til að komast inn á ykkar sérsviðssíðu.</p>
+    </section>
+
+    <section class="card">
+        <h2>Aðgangur að sérsviði</h2>
+        <div id="password-form">
+            <label for="password">Sláðu inn lykilorð:</label><br>
+            <input type="password" id="password" placeholder="Lykilorð..."><br>
+            <button onclick="checkPasswordAndRedirect()">Opna síðu ✨</button>
+            <p id="error-message" class="error"></p>
         </div>
-    </div>
+    </section>
 
-    <main class="container">
-        <section id="velkomin">
-            <h2>Velkomin í verkefnið!</h2>
-            <p>Hér finnur þú allar upplýsingar og gögn sem þú þarft til að stofna þitt "fyrirtæki" og búa til afurð fyrir 20 ára afmæli Norðlingaskóla.</p>
-            <p>Byrjaðu á að skoða <strong>Startmöppuna</strong> hér að neðan.</p>
-        </section>
+    <section>
+        <h2>Verkfæri</h2>
+        <ul>
+            <li><a href="https://www.canva.com" target="_blank">🎨 Canva (hönnun)</a></li>
+            <li><a href="https://pixabay.com" target="_blank">📸 Pixabay (myndir)</a></li>
+            <li><a href="https://www.storyboardthat.com" target="_blank">📱 Storyboard That</a></li>
+            <li><a href="https://www.audacityteam.org/" target="_blank">🎵 Audacity</a></li>
+        </ul>
+    </section>
+</main>
 
-        <div class="card" id="startmappa">
-            <h3>I. Startmappa: Grunnurinn</h3>
-            <ul>
-                <li><a href="https://docs.google.com/document/d/1__EoNFjAm0P8ApGeOex3Nj-E621xiymbpJmu1_tFsp0/edit?usp=sharing" target="_blank">📋 Verkefnalýsing í Stuttu Máli (Docs)</a></li>
-                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfgSBJeu5Xk4R5OLDV7w-ZeX0rYN_-W9rldpWhm-APBMMLLjA/viewform?usp=sharing&ouid=112230711935746751447" target="_blank">🏢 Stofnskjal Fyrirtækis (Sniðmát - Forms)</a></li>
-                <li><a href="https://docs.google.com/document/d/1bxzNf_SorCYY3NVeZhgysK6-xezp5xt-eC2HI7sBPGc/edit?usp=sharing" target="_blank">💡 Hugmyndabanki – Möguleg Fyrirtæki</a></li>
-                <li><a href="https://docs.google.com/document/d/1fLnuhvVVEO59iRZiPuVLAPoqH1bRPP0Qdxy2kFkWPDU/edit?usp=sharing" target="_blank">📅 Tímalína Verkefnis (Gróf)</a></li>
-            </ul>
-            <p>Þegar þið hafið fyllt út og skilað <strong>Stofnskjali Fyrirtækis</strong> og fengið lykilorð frá kennara í tölvupósti, sláið það inn hér að neðan til að komast á ykkar sérsviðssíðu.</p>
-        </div>
+<footer>
+    <p>© 2024 Norðlingaskóli – Afmælisverkefni unglingastigs</p>
+</footer>
 
-        <div class="card" id="adgangur-sersvid">
-            <h3>II. Aðgangur að Ykkar Efni</h3>
-            <div id="password-form">
-                <label for="password">🔐 Sláðu inn lykilorðið sem þú fékkst frá kennara:</label>
-                <input type="password" id="password" name="password" placeholder="Lykilorð...">
-                <br>
-                <button onclick="checkPasswordAndRedirect()">Opna Síðu ✨</button>
-                <p id="error-message" class="error"></p>
-            </div>
-        </div>
+<script>
+    const PASSWORD_TO_URL_MAP = {
+        'ArkitektStart20': 'sersvid/arkitektar_verkefni.html',
+        'ArkitektPlan24': 'sersvid/arkitektar_djupkofun.html',
+        'LeiklistGrunnur': 'sersvid/leikhopur_svidslist.html',
+        'LeikurMeistarar': 'sersvid/leikhopur_djupkofun.html',
+        'FrettirNSafmæli': 'sersvid/frettaveita_midlun.html',
+        'MidlunProff20': 'sersvid/frettaveita_djupkofun.html',
+        'HönnunStartNS': 'sersvid/honnunarstofa_skopun.html',
+        'SköpunMeistari': 'sersvid/honnunarstofa_djupkofun.html'
+    };
 
-        <div class="card" id="onnur-gogn">
-            <h3 id="hugmyndabanki-example">💭 Hugmyndabanki (Almenn Dæmi)</h3>
-            <ul>
-                <li><strong>Arkitektafyrirtæki:</strong> Gerir líkan af nýrri/eldri byggingu.</li>
-                <li><strong>Leikhópur:</strong> Setur á svið senur úr fyrri leikritum.</li>
-                <li><strong>Fréttaveita:</strong> Býr til afmælisfréttablað/myndband.</li>
-                <li><strong>Hönnunarstofa:</strong> Hannar afmælismerki/plakat.</li>
-            </ul>
-            
-            <h3 id="timalina-example">⏰ Tímalína Verkefnis (Gróf Dæmi)</h3>
-            <ul>
-                <li><strong>Dagur 1 (Morgun):</strong> Hugmyndavinna, hópaskipting, fyrirtækjastofnun (fylla út Stofnskjal).</li>
-                <li><strong>Dagur 1 (Eftirmiðdagur):</strong> Fá lykilorð að sérsviðssíðu (Stig 1), hefja verkáætlun og rannsókn.</li>
-                <li><strong>Dagur 2:</strong> Framleiðsla og úrvinnsla. Möguleiki á að fá aðgang að Stig 2 efni.</li>
-                <li><strong>Dagur 3 (Morgun):</strong> Lokafrágangur, undirbúningur kynningar.</li>
-                <li><strong>Dagur 3 (Eftirmiðdagur):</strong> Síðustu handtök. Búið að setja allt upp sem þarf að fara upp!</li>
-            </ul>
-        </div>
+    function checkPasswordAndRedirect() {
+        const password = document.getElementById('password').value.trim();
+        const errorElem = document.getElementById('error-message');
 
-        <div class="card" id="verkfaerakista">
-            <h3>🛠️ Verkfærakista / Almennur Stuðningur</h3>
-            <ul>
-                <li><strong>Hægt að fá hjálp þegar búið er að fylla út fyrsta skjalið:</strong> Svo er hægt að tala við kennara!</li>
-                <li><a href="https://www.canva.com" target="_blank">🎨 Canva (ókeypis hönnunartól)</a></li>
-                <li><a href="https://pixabay.com" target="_blank">📸 Pixabay (ókeypis myndir)</a></li>
-                <li><a href="https://www.storyboardthat.com/storyboard-creator" target="_blank">📱 Storyboard That (ókeypis söguborðsgerð)</a></li>
-                <li><a href="https://www.audacityteam.org/" target="_blank">🎵 Audacity (ókeypis hljóðvinnsluforrit)</a></li>
-            </ul>
-        </div>
-    </main>
-
-    <footer>
-        <p>© 2024 Norðlingaskóli - Afmælisverkefni Unglingastigs ✨</p>
-    </footer>
-
-    <script>
-        // Password checking function (þú þarft að bæta við raunverulegri virkni)
-        function checkPasswordAndRedirect() {
-            const password = document.getElementById('password').value;
-            const errorMessage = document.getElementById('error-message');
-            
-            if (password === '') {
-                errorMessage.textContent = 'Vinsamlegast sláðu inn lykilorð.';
-                return;
-            }
-            
-            // Hér myndir þú bæta við raunverulegri lykilorðaathugun
-            // Þetta er bara dæmi:
-            if (password === 'demo123') {
-                window.location.href = 'sersvid-sida.html'; // Breyttu þessu í réttan hlekk
-            } else {
-                errorMessage.textContent = 'Rangt lykilorð. Reyndu aftur.';
-                document.getElementById('password').value = '';
-            }
+        if (PASSWORD_TO_URL_MAP.hasOwnProperty(password)) {
+            window.location.href = PASSWORD_TO_URL_MAP[password];
+        } else {
+            errorElem.textContent = 'Rangt lykilorð. Reyndu aftur eða hafðu samband við kennara.';
+            document.getElementById('password').value = '';
         }
+    }
 
-        // Allow Enter key to submit password
-        document.getElementById('password').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                checkPasswordAndRedirect();
-            }
-        });
+    document.getElementById('password').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            checkPasswordAndRedirect();
+        }
+    });
+</script>
 
-        // Add scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe all cards
-        document.querySelectorAll('.card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
-        });
-    </script>
 </body>
 </html>
