@@ -36,9 +36,6 @@ function checkPasswordAndRedirect() {
         // Ef innslegið lykilorð finnst sem "lykill" (key) í PASSWORD_TO_URL_MAP objectinu
         const targetUrl = PASSWORD_TO_URL_MAP[enteredPassword]; // Ná í samsvarandi vefslóð (value)
         
-        // Hér gætum við bætt við smá seinkun áður en vísað er áfram,
-        // til að gefa notanda tækifæri til að sjá að eitthvað sé að gerast,
-        // en fyrir beinharða vísun er þetta í lagi.
         window.location.href = targetUrl; // Vísa vafra notanda á þá síðu
         
         errorMessageElem.textContent = ''; // Hreinsa villuskilaboð (ef einhver voru frá fyrri tilraun)
@@ -56,7 +53,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     if (passwordField) {
         passwordField.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
-                // Koma í veg fyrir sjálfgefið submit ef þetta væri innan <form> taggs
                 e.preventDefault(); 
                 checkPasswordAndRedirect();
             }
